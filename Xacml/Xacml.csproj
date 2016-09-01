@@ -1,0 +1,466 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F23EA9C0-930E-4BC8-A1DB-4A05AC871E88}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Xacml</RootNamespace>
+    <AssemblyName>Xacml</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Elements\Context\Advice.cs" />
+    <Compile Include="Elements\Context\AssociatedAdvice.cs" />
+    <Compile Include="Elements\Context\Attribute.cs" />
+    <Compile Include="Elements\Context\AttributeAssignment.cs" />
+    <Compile Include="Elements\Context\Attributes.cs" />
+    <Compile Include="Elements\Context\AttributesReference.cs" />
+    <Compile Include="Elements\Context\Content.cs" />
+    <Compile Include="Elements\Context\Decision.cs" />
+    <Compile Include="Elements\Context\EvaluationContext.cs" />
+    <Compile Include="Elements\Context\MissingAttributeDetail.cs" />
+    <Compile Include="Elements\Context\MultiRequests.cs" />
+    <Compile Include="Elements\Context\Obligation.cs" />
+    <Compile Include="Elements\Context\Obligations.cs" />
+    <Compile Include="Elements\Context\PolicyIdentifierList.cs" />
+    <Compile Include="Elements\Context\Request.cs" />
+    <Compile Include="Elements\Context\RequestDefaults.cs" />
+    <Compile Include="Elements\Context\RequestReference.cs" />
+    <Compile Include="Elements\Context\Response.cs" />
+    <Compile Include="Elements\Context\Result.cs" />
+    <Compile Include="Elements\Context\Status.cs" />
+    <Compile Include="Elements\Context\StatusCode.cs" />
+    <Compile Include="Elements\Context\StatusDetail.cs" />
+    <Compile Include="Elements\Context\StatusMessage.cs" />
+    <Compile Include="Elements\Context\XPathNamespaceContext.cs" />
+    <Compile Include="Elements\Context\XPathVersion.cs" />
+    <Compile Include="Elements\DataType\AnyURIDataType.cs" />
+    <Compile Include="Elements\DataType\BagDataType.cs" />
+    <Compile Include="Elements\DataType\Base64BinaryDataType.cs" />
+    <Compile Include="Elements\DataType\BooleanDataType.cs" />
+    <Compile Include="Elements\DataType\DataTypeFactory.cs" />
+    <Compile Include="Elements\DataType\DataTypeValue.cs" />
+    <Compile Include="Elements\DataType\DateDataType.cs" />
+    <Compile Include="Elements\DataType\DateTimeDataType.cs" />
+    <Compile Include="Elements\DataType\DayTimeDurationDataType.cs" />
+    <Compile Include="Elements\DataType\DnsNameDataType.cs" />
+    <Compile Include="Elements\DataType\DoubleDataType.cs" />
+    <Compile Include="Elements\DataType\ExtensibleDataTypeFactory.cs" />
+    <Compile Include="Elements\DataType\HexBinaryDataType.cs" />
+    <Compile Include="Elements\DataType\IDataType.cs" />
+    <Compile Include="Elements\DataType\IntegerDataType.cs" />
+    <Compile Include="Elements\DataType\IpAddressDataType.cs" />
+    <Compile Include="Elements\DataType\ParseXMLDateTime.cs" />
+    <Compile Include="Elements\DataType\PortRange.cs" />
+    <Compile Include="Elements\DataType\Proxy\AnyURIDataTypeProxy.cs" />
+    <Compile Include="Elements\DataType\Proxy\BagDataTypeProxy.cs" />
+    <Compile Include="Elements\DataType\Proxy\Base64BinaryDataTypeProxy.cs" />
+    <Compile Include="Elements\DataType\Proxy\BooleanDataTypeProxy.cs" />
+    <Compile Include="Elements\DataType\Proxy\IDataTypeFactoryProxy.cs" />
+    <Compile Include="Elements\DataType\Proxy\IDataTypeProxy.cs" />
+    <Compile Include="Elements\DataType\Proxy\DateDataTypeProxy.cs" />
+    <Compile Include="Elements\DataType\Proxy\DateTimeDataTypeProxy.cs" />
+    <Compile Include="Elements\DataType\Proxy\DayTimeDurationDataTypeProxy.cs" />
+    <Compile Include="Elements\DataType\Proxy\DnsNameDataTypeProxy.cs" />
+    <Compile Include="Elements\DataType\Proxy\DoubleDataTypeProxy.cs" />
+    <Compile Include="Elements\DataType\Proxy\HexBinaryDataTypeProxy.cs" />
+    <Compile Include="Elements\DataType\Proxy\IntegerDataTypeProxy.cs" />
+    <Compile Include="Elements\DataType\Proxy\IpAddressDataTypeProxy.cs" />
+    <Compile Include="Elements\DataType\Proxy\RFC822NameDataTypeProxy.cs" />
+    <Compile Include="Elements\DataType\Proxy\StringDataTypeProxy.cs" />
+    <Compile Include="Elements\DataType\Proxy\X500NameDataTypeProxy.cs" />
+    <Compile Include="Elements\DataType\Proxy\XpathExpressionDataTypeProxy.cs" />
+    <Compile Include="Elements\DataType\Proxy\YearMonthDurationDataTypeProxy.cs" />
+    <Compile Include="Elements\DataType\RFC822NameDataType.cs" />
+    <Compile Include="Elements\DataType\StandardDataTypeFactory.cs" />
+    <Compile Include="Elements\DataType\StringDataType.cs" />
+    <Compile Include="Elements\DataType\TimeDataType.cs" />
+    <Compile Include="Elements\DataType\X500NameDataType.cs" />
+    <Compile Include="Elements\DataType\XpathExpressionDataType.cs" />
+    <Compile Include="Elements\DataType\YearMonthDurationDataType.cs" />
+    <Compile Include="Types\Helpers\TypeHelper.cs" />
+    <Compile Include="Types\Streams\ByteArrayInputStream.cs" />
+    <Compile Include="Types\Date\Calendar.cs" />
+    <Compile Include="Interfaces\IComparable.cs" />
+    <Compile Include="Types\Web\Connection.cs" />
+    <Compile Include="Types\Xml\Document.cs" />
+    <Compile Include="Types\Xml\DocumentBuilder.cs" />
+    <Compile Include="Types\Xml\Factories\DocumentBuilderFactory.cs" />
+    <Compile Include="Types\Helpers\DoubleHelper.cs" />
+    <Compile Include="Utils\Directory.cs" />
+    <Compile Include="Types\Streams\FileInputStream.cs" />
+    <Compile Include="Exceptions\FileNotFoundException.cs" />
+    <Compile Include="Types\Streams\InputStream.cs" />
+    <Compile Include="Utils\Logger.cs" />
+    <Compile Include="Utils\Matcher.cs" />
+    <Compile Include="Types\Xml\NamedNodeMap.cs" />
+    <Compile Include="Types\Xml\Node.cs" />
+    <Compile Include="Types\Xml\NodeList.cs" />
+    <Compile Include="Types\Streams\OutputStream.cs" />
+    <Compile Include="Exceptions\ParserConfigurationException.cs" />
+    <Compile Include="Utils\Pattern.cs" />
+    <Compile Include="Types\Streams\PrintStream.cs" />
+    <Compile Include="Types\Properties\Properties.cs" />
+    <Compile Include="Exceptions\SAXException.cs" />
+    <Compile Include="Exceptions\SAXParseException.cs" />
+    <Compile Include="Types\Helpers\StringHelper.cs" />
+    <Compile Include="Types\Date\TimeZone.cs" />
+    <Compile Include="Exceptions\UnsupportedOperationException.cs" />
+    <Compile Include="Types\Web\URI.cs" />
+    <Compile Include="Exceptions\URISyntaxException.cs" />
+    <Compile Include="Types\Web\URL.cs" />
+    <Compile Include="Exceptions\XPathExpressionException.cs" />
+    <Compile Include="Types\Xml\Factories\XPathFactory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CombiningAlgorithm\V10\CombingAlgorithmPolicyDenyOverrides10.cs" />
+    <Compile Include="CombiningAlgorithm\V30\CombingAlgorithmPolicyDenyOverrides30.cs" />
+    <Compile Include="CombiningAlgorithm\V30\CombingAlgorithmPolicyDenyUnlessPermit30.cs" />
+    <Compile Include="CombiningAlgorithm\V10\CombingAlgorithmPolicyFirstApplicable10.cs" />
+    <Compile Include="CombiningAlgorithm\V10\CombingAlgorithmPolicyOnlyOneApplicable10.cs" />
+    <Compile Include="CombiningAlgorithm\V30\CombingAlgorithmPolicyOrderedDenyOverrides30.cs" />
+    <Compile Include="CombiningAlgorithm\V30\CombingAlgorithmPolicyOrderedPermitOverrides30.cs" />
+    <Compile Include="CombiningAlgorithm\V10\CombingAlgorithmPolicyPermitOverrides10.cs" />
+    <Compile Include="CombiningAlgorithm\V30\CombingAlgorithmPolicyPermitOverrides30.cs" />
+    <Compile Include="CombiningAlgorithm\V30\CombingAlgorithmPolicyPermitUnlessDeny30.cs" />
+    <Compile Include="CombiningAlgorithm\V10\CombingAlgorithmRuleDenyOverrides10.cs" />
+    <Compile Include="CombiningAlgorithm\V30\CombingAlgorithmRuleDenyOverrides30.cs" />
+    <Compile Include="CombiningAlgorithm\V30\CombingAlgorithmRuleDenyUnlessPermit30.cs" />
+    <Compile Include="CombiningAlgorithm\V10\CombingAlgorithmRuleFirstApplicable10.cs" />
+    <Compile Include="CombiningAlgorithm\V30\CombingAlgorithmRuleOrderedDenyOverrides30.cs" />
+    <Compile Include="CombiningAlgorithm\V30\CombingAlgorithmRuleOrderedPermitOverrides30.cs" />
+    <Compile Include="CombiningAlgorithm\V10\CombingAlgorithmRulePermitOverrides10.cs" />
+    <Compile Include="CombiningAlgorithm\V30\CombingAlgorithmRulePermitOverrides30.cs" />
+    <Compile Include="CombiningAlgorithm\V30\CombingAlgorithmRulePermitUnlessDeny30.cs" />
+    <Compile Include="CombiningAlgorithm\ICombiningAlgorithm.cs" />
+    <Compile Include="CombiningAlgorithm\CombiningAlgorithmFactory.cs" />
+    <Compile Include="Elements\IElement.cs" />
+    <Compile Include="Engine\PDP.cs" />
+    <Compile Include="Engine\PEP.cs" />
+    <Compile Include="Elements\Function\AccessPermitted.cs" />
+    <Compile Include="Elements\Function\Arithmetic\DateAddYearMonthDuration.cs" />
+    <Compile Include="Elements\Function\Arithmetic\DateSubtractYearMonthDuration.cs" />
+    <Compile Include="Elements\Function\Arithmetic\DateTimeAddDayTimeDuration.cs" />
+    <Compile Include="Elements\Function\Arithmetic\DateTimeAddYearMonthDuration.cs" />
+    <Compile Include="Elements\Function\Arithmetic\DateTimeSubtractDayTimeDuration.cs" />
+    <Compile Include="Elements\Function\Arithmetic\DateTimeSubtractYearMonthDuration.cs" />
+    <Compile Include="Elements\Function\Arithmetic\DoubleAbs.cs" />
+    <Compile Include="Elements\Function\Arithmetic\DoubleAdd.cs" />
+    <Compile Include="Elements\Function\Arithmetic\DoubleDivide.cs" />
+    <Compile Include="Elements\Function\Arithmetic\DoubleMultiply.cs" />
+    <Compile Include="Elements\Function\Arithmetic\DoubleSubtract.cs" />
+    <Compile Include="Elements\Function\Arithmetic\DoubleToInteger.cs" />
+    <Compile Include="Elements\Function\Arithmetic\Floor.cs" />
+    <Compile Include="Elements\Function\Arithmetic\IntegerAbs.cs" />
+    <Compile Include="Elements\Function\Arithmetic\IntegerAdd.cs" />
+    <Compile Include="Elements\Function\Arithmetic\IntegerDivide.cs" />
+    <Compile Include="Elements\Function\Arithmetic\IntegerMod.cs" />
+    <Compile Include="Elements\Function\Arithmetic\IntegerMultiply.cs" />
+    <Compile Include="Elements\Function\Arithmetic\IntegerSubtract.cs" />
+    <Compile Include="Elements\Function\Arithmetic\IntegerToDouble.cs" />
+    <Compile Include="Elements\Function\Arithmetic\Round.cs" />
+    <Compile Include="Elements\Function\Arithmetic\XPathNodeCount.cs" />
+    <Compile Include="Elements\Function\Bag\AllOf.cs" />
+    <Compile Include="Elements\Function\Bag\AllOfAll.cs" />
+    <Compile Include="Elements\Function\Bag\AllOfAny.cs" />
+    <Compile Include="Elements\Function\Bag\AnyOf.cs" />
+    <Compile Include="Elements\Function\Bag\AnyOfAll.cs" />
+    <Compile Include="Elements\Function\Bag\AnyOfAny.cs" />
+    <Compile Include="Elements\Function\Bag\AnyURIBag.cs" />
+    <Compile Include="Elements\Function\Bag\AnyURIBagSize.cs" />
+    <Compile Include="Elements\Function\Bag\AnyURIIsIn.cs" />
+    <Compile Include="Elements\Function\Bag\AnyURIOneAndOnly.cs" />
+    <Compile Include="Elements\Function\Bag\BagSize.cs" />
+    <Compile Include="Elements\Function\Bag\Base64BinaryBag.cs" />
+    <Compile Include="Elements\Function\Bag\Base64BinaryBagSize.cs" />
+    <Compile Include="Elements\Function\Bag\Base64BinaryIsIn.cs" />
+    <Compile Include="Elements\Function\Bag\Base64BinaryOneAndOnly.cs" />
+    <Compile Include="Elements\Function\Bag\BooleanBag.cs" />
+    <Compile Include="Elements\Function\Bag\BooleanBagSize.cs" />
+    <Compile Include="Elements\Function\Bag\BooleanIsIn.cs" />
+    <Compile Include="Elements\Function\Bag\BooleanOneAndOnly.cs" />
+    <Compile Include="Elements\Function\Bag\DateBag.cs" />
+    <Compile Include="Elements\Function\Bag\DateBagSize.cs" />
+    <Compile Include="Elements\Function\Bag\DateIsIn.cs" />
+    <Compile Include="Elements\Function\Bag\DateOneAndOnly.cs" />
+    <Compile Include="Elements\Function\Bag\DateTimeBag.cs" />
+    <Compile Include="Elements\Function\Bag\DateTimeBagSize.cs" />
+    <Compile Include="Elements\Function\Bag\DateTimeIsIn.cs" />
+    <Compile Include="Elements\Function\Bag\DateTimeOneAndOnly.cs" />
+    <Compile Include="Elements\Function\Bag\DayTimeDurationBag.cs" />
+    <Compile Include="Elements\Function\Bag\DayTimeDurationBagSize.cs" />
+    <Compile Include="Elements\Function\Bag\DayTimeDurationIsIn.cs" />
+    <Compile Include="Elements\Function\Bag\DayTimeDurationOneAndOnly.cs" />
+    <Compile Include="Elements\Function\Bag\DnsNameBag.cs" />
+    <Compile Include="Elements\Function\Bag\DnsNameBagSize.cs" />
+    <Compile Include="Elements\Function\Bag\DnsNameIsIn.cs" />
+    <Compile Include="Elements\Function\Bag\DnsNameOneAndOnly.cs" />
+    <Compile Include="Elements\Function\Bag\DoubleBag.cs" />
+    <Compile Include="Elements\Function\Bag\DoubleBagSize.cs" />
+    <Compile Include="Elements\Function\Bag\DoubleIsIn.cs" />
+    <Compile Include="Elements\Function\Bag\DoubleOneAndOnly.cs" />
+    <Compile Include="Elements\Function\Bag\HexBinaryBag.cs" />
+    <Compile Include="Elements\Function\Bag\HexBinaryBagSize.cs" />
+    <Compile Include="Elements\Function\Bag\HexBinaryIsIn.cs" />
+    <Compile Include="Elements\Function\Bag\HexBinaryOneAndOnly.cs" />
+    <Compile Include="Elements\Function\Bag\IntegerBag.cs" />
+    <Compile Include="Elements\Function\Bag\IntegerBagSize.cs" />
+    <Compile Include="Elements\Function\Bag\IntegerIsIn.cs" />
+    <Compile Include="Elements\Function\Bag\IntegerOneAndOnly.cs" />
+    <Compile Include="Elements\Function\Bag\IpAddressBag.cs" />
+    <Compile Include="Elements\Function\Bag\IpAddressBagSize.cs" />
+    <Compile Include="Elements\Function\Bag\IpAddressIsIn.cs" />
+    <Compile Include="Elements\Function\Bag\IpAddressOneAndOnly.cs" />
+    <Compile Include="Elements\Function\Bag\Map.cs" />
+    <Compile Include="Elements\Function\Bag\OneAndOnly.cs" />
+    <Compile Include="Elements\Function\Bag\Rfc822NameBag.cs" />
+    <Compile Include="Elements\Function\Bag\Rfc822NameBagSize.cs" />
+    <Compile Include="Elements\Function\Bag\Rfc822NameIsIn.cs" />
+    <Compile Include="Elements\Function\Bag\Rfc822NameOneAndOnly.cs" />
+    <Compile Include="Elements\Function\Bag\StringBag.cs" />
+    <Compile Include="Elements\Function\Bag\StringBagSize.cs" />
+    <Compile Include="Elements\Function\Bag\StringIsIn.cs" />
+    <Compile Include="Elements\Function\Bag\StringOneAndOnly.cs" />
+    <Compile Include="Elements\Function\Bag\TimeBag.cs" />
+    <Compile Include="Elements\Function\Bag\TimeBagSize.cs" />
+    <Compile Include="Elements\Function\Bag\TimeIsIn.cs" />
+    <Compile Include="Elements\Function\Bag\TimeOneAndOnly.cs" />
+    <Compile Include="Elements\Function\Bag\TypeBag.cs" />
+    <Compile Include="Elements\Function\Bag\TypeIsIn.cs" />
+    <Compile Include="Elements\Function\Bag\X500NameBag.cs" />
+    <Compile Include="Elements\Function\Bag\X500NameBagSize.cs" />
+    <Compile Include="Elements\Function\Bag\X500NameIsIn.cs" />
+    <Compile Include="Elements\Function\Bag\X500NameOneAndOnly.cs" />
+    <Compile Include="Elements\Function\Bag\YearMonthDurationBag.cs" />
+    <Compile Include="Elements\Function\Bag\YearMonthDurationBagSize.cs" />
+    <Compile Include="Elements\Function\Bag\YearMonthDurationIsIn.cs" />
+    <Compile Include="Elements\Function\Bag\YearMonthDurationOneAndOnly.cs" />
+    <Compile Include="Elements\Function\Equal\AnyURIEqual.cs" />
+    <Compile Include="Elements\Function\Equal\Base64BinaryEqual.cs" />
+    <Compile Include="Elements\Function\Equal\BooleanEqual.cs" />
+    <Compile Include="Elements\Function\Equal\DateEqual.cs" />
+    <Compile Include="Elements\Function\Equal\DateTimeEqual.cs" />
+    <Compile Include="Elements\Function\Equal\DayTimeDurationEqual.cs" />
+    <Compile Include="Elements\Function\Equal\DoubleEqual.cs" />
+    <Compile Include="Elements\Function\Equal\HexBinaryEqual.cs" />
+    <Compile Include="Elements\Function\Equal\IntegerEqual.cs" />
+    <Compile Include="Elements\Function\Equal\Rfc822NameEqual.cs" />
+    <Compile Include="Elements\Function\Equal\StringEqual.cs" />
+    <Compile Include="Elements\Function\Equal\StringEqualIgnoreCase.cs" />
+    <Compile Include="Elements\Function\Equal\TimeEqual.cs" />
+    <Compile Include="Elements\Function\Equal\X500NameEqual.cs" />
+    <Compile Include="Elements\Function\Equal\XPathNodeEqual.cs" />
+    <Compile Include="Elements\Function\Equal\YearMonthDurationEqual.cs" />
+    <Compile Include="Elements\Function\Function.cs" />
+    <Compile Include="Elements\Function\FunctionFactory.cs" />
+    <Compile Include="Elements\Function\Logic\And.cs" />
+    <Compile Include="Elements\Function\Logic\DateGreaterThan.cs" />
+    <Compile Include="Elements\Function\Logic\DateGreaterThanOrEqual.cs" />
+    <Compile Include="Elements\Function\Logic\DateLessThan.cs" />
+    <Compile Include="Elements\Function\Logic\DateLessThanOrEqual.cs" />
+    <Compile Include="Elements\Function\Logic\DateTimeGreaterThan.cs" />
+    <Compile Include="Elements\Function\Logic\DateTimeGreaterThanOrEqual.cs" />
+    <Compile Include="Elements\Function\Logic\DateTimeLessThan.cs" />
+    <Compile Include="Elements\Function\Logic\DateTimeLessThanOrEqual.cs" />
+    <Compile Include="Elements\Function\Logic\DoubleGreaterThan.cs" />
+    <Compile Include="Elements\Function\Logic\DoubleGreaterThanOrEqual.cs" />
+    <Compile Include="Elements\Function\Logic\DoubleLessThan.cs" />
+    <Compile Include="Elements\Function\Logic\DoubleLessThanOrEqual.cs" />
+    <Compile Include="Elements\Function\Logic\IntegerGreaterThan.cs" />
+    <Compile Include="Elements\Function\Logic\IntegerGreaterThanOrEqual.cs" />
+    <Compile Include="Elements\Function\Logic\IntegerLessThan.cs" />
+    <Compile Include="Elements\Function\Logic\IntegerLessThanOrEqual.cs" />
+    <Compile Include="Elements\Function\Logic\NOf.cs" />
+    <Compile Include="Elements\Function\Logic\Not.cs" />
+    <Compile Include="Elements\Function\Logic\Or.cs" />
+    <Compile Include="Elements\Function\Logic\StringGreaterThan.cs" />
+    <Compile Include="Elements\Function\Logic\StringGreaterThanOrEqual.cs" />
+    <Compile Include="Elements\Function\Logic\StringLessThan.cs" />
+    <Compile Include="Elements\Function\Logic\StringLessThanOrEqual.cs" />
+    <Compile Include="Elements\Function\Logic\TimeGreaterThan.cs" />
+    <Compile Include="Elements\Function\Logic\TimeGreaterThanOrEqual.cs" />
+    <Compile Include="Elements\Function\Logic\TimeInRange.cs" />
+    <Compile Include="Elements\Function\Logic\TimeLessThan.cs" />
+    <Compile Include="Elements\Function\Logic\TimeLessThanOrEqual.cs" />
+    <Compile Include="Elements\Function\Match\AnyURIRegexpMatch.cs" />
+    <Compile Include="Elements\Function\Match\DnsNameRegexpMatch.cs" />
+    <Compile Include="Elements\Function\Match\IpAddressRegexpMatch.cs" />
+    <Compile Include="Elements\Function\Match\Rfc822NameMatch.cs" />
+    <Compile Include="Elements\Function\Match\Rfc822NameRegexpMatch.cs" />
+    <Compile Include="Elements\Function\Match\StringRegexpMatch.cs" />
+    <Compile Include="Elements\Function\Match\X500NameMatch.cs" />
+    <Compile Include="Elements\Function\Match\X500NameRegexpMatch.cs" />
+    <Compile Include="Elements\Function\Match\XPathNodeMatch.cs" />
+    <Compile Include="Elements\Function\Set\AtLeastOneMemberOf.cs" />
+    <Compile Include="Elements\Function\Set\Intersection.cs" />
+    <Compile Include="Elements\Function\Set\TypeSetEquals.cs" />
+    <Compile Include="Elements\Function\Set\TypeSubset.cs" />
+    <Compile Include="Elements\Function\Set\TypeUnion.cs" />
+    <Compile Include="Elements\Function\String\AnyURIContains.cs" />
+    <Compile Include="Elements\Function\String\AnyURIEndsWith.cs" />
+    <Compile Include="Elements\Function\String\AnyURIFromString.cs" />
+    <Compile Include="Elements\Function\String\AnyURIStartsWith.cs" />
+    <Compile Include="Elements\Function\String\AnyURISubstring.cs" />
+    <Compile Include="Elements\Function\String\BooleanFromString.cs" />
+    <Compile Include="Elements\Function\String\DateFromString.cs" />
+    <Compile Include="Elements\Function\String\DateTimeFromString.cs" />
+    <Compile Include="Elements\Function\String\DayTimeDurationFromString.cs" />
+    <Compile Include="Elements\Function\String\DnsNameFromString.cs" />
+    <Compile Include="Elements\Function\String\DoubleFromString.cs" />
+    <Compile Include="Elements\Function\String\IntegerFromString.cs" />
+    <Compile Include="Elements\Function\String\IpAddressFromString.cs" />
+    <Compile Include="Elements\Function\String\Rfc822NameFromString.cs" />
+    <Compile Include="Elements\Function\String\StringConcatenate.cs" />
+    <Compile Include="Elements\Function\String\StringContains.cs" />
+    <Compile Include="Elements\Function\String\StringEndsWith.cs" />
+    <Compile Include="Elements\Function\String\StringFromAnyURI.cs" />
+    <Compile Include="Elements\Function\String\StringFromBoolean.cs" />
+    <Compile Include="Elements\Function\String\StringFromDate.cs" />
+    <Compile Include="Elements\Function\String\StringFromDateTime.cs" />
+    <Compile Include="Elements\Function\String\StringFromDayTimeDuration.cs" />
+    <Compile Include="Elements\Function\String\StringFromDnsName.cs" />
+    <Compile Include="Elements\Function\String\StringFromDouble.cs" />
+    <Compile Include="Elements\Function\String\StringFromInteger.cs" />
+    <Compile Include="Elements\Function\String\StringFromIpAddress.cs" />
+    <Compile Include="Elements\Function\String\StringFromRfc822Name.cs" />
+    <Compile Include="Elements\Function\String\StringFromTime.cs" />
+    <Compile Include="Elements\Function\String\StringFromX500Name.cs" />
+    <Compile Include="Elements\Function\String\StringFromYearMonthDuration.cs" />
+    <Compile Include="Elements\Function\String\StringNormalizeSpace.cs" />
+    <Compile Include="Elements\Function\String\StringNormalizeToLowercase.cs" />
+    <Compile Include="Elements\Function\String\StringStartsWith.cs" />
+    <Compile Include="Elements\Function\String\StringSubstring.cs" />
+    <Compile Include="Elements\Function\String\TimeFromString.cs" />
+    <Compile Include="Elements\Function\String\X500NameFromString.cs" />
+    <Compile Include="Elements\Function\String\YearMonthDurationFromString.cs" />
+    <Compile Include="Elements\Function\XPathHelper.cs" />
+    <Compile Include="Elements\Policy\AdviceExpression.cs" />
+    <Compile Include="Elements\Policy\AdviceExpressions.cs" />
+    <Compile Include="Elements\Policy\AllOf.cs" />
+    <Compile Include="Elements\Policy\AnyOf.cs" />
+    <Compile Include="Elements\Policy\Apply.cs" />
+    <Compile Include="Elements\Policy\AttributeAssignmentExpression.cs" />
+    <Compile Include="Elements\Policy\AttributeDesignator.cs" />
+    <Compile Include="Elements\Policy\AttributeSelector.cs" />
+    <Compile Include="Elements\Policy\AttributeValue.cs" />
+    <Compile Include="Elements\Policy\CombinerParameter.cs" />
+    <Compile Include="Elements\Policy\CombinerParameters.cs" />
+    <Compile Include="Elements\Policy\Condition.cs" />
+    <Compile Include="Elements\Policy\Description.cs" />
+    <Compile Include="Elements\Policy\Effect.cs" />
+    <Compile Include="Elements\Policy\IEvaluatable.cs" />
+    <Compile Include="Elements\Policy\Function.cs" />
+    <Compile Include="Elements\Policy\Match.cs" />
+    <Compile Include="Elements\Policy\ObligationExpression.cs" />
+    <Compile Include="Elements\Policy\ObligationExpressions.cs" />
+    <Compile Include="Elements\Policy\IObligationsAndAdviceAvaluatable.cs" />
+    <Compile Include="Elements\Policy\Policy.cs" />
+    <Compile Include="Elements\Policy\PolicyCombinerParameters.cs" />
+    <Compile Include="Elements\Policy\PolicyDefaults.cs" />
+    <Compile Include="Elements\Policy\PolicyElementFactory.cs" />
+    <Compile Include="Elements\Policy\IPolicyElementFactoryProxy.cs" />
+    <Compile Include="Elements\Policy\PolicyIdReference.cs" />
+    <Compile Include="Elements\Policy\PolicyIssuer.cs" />
+    <Compile Include="Elements\Policy\IPolicyLanguageModel.cs" />
+    <Compile Include="Elements\Policy\PolicySchema.cs" />
+    <Compile Include="Elements\Policy\PolicySet.cs" />
+    <Compile Include="Elements\Policy\PolicySetCombinerParameters.cs" />
+    <Compile Include="Elements\Policy\PolicySetDefaults.cs" />
+    <Compile Include="Elements\Policy\PolicySetIdReference.cs" />
+    <Compile Include="Elements\Policy\Proxy\AdviceExpressionProxy.cs" />
+    <Compile Include="Elements\Policy\Proxy\AdviceExpressionsProxy.cs" />
+    <Compile Include="Elements\Policy\Proxy\AllofProxy.cs" />
+    <Compile Include="Elements\Policy\Proxy\AnyOfProxy.cs" />
+    <Compile Include="Elements\Policy\Proxy\ApplyProxy.cs" />
+    <Compile Include="Elements\Policy\Proxy\AttributeAssignmentExpressionProxy.cs" />
+    <Compile Include="Elements\Policy\Proxy\AttributeDesignatorProxy.cs" />
+    <Compile Include="Elements\Policy\Proxy\AttributeSelectorProxy.cs" />
+    <Compile Include="Elements\Policy\Proxy\AttributeValueProxy.cs" />
+    <Compile Include="Elements\Policy\Proxy\CombinerParameterProxy.cs" />
+    <Compile Include="Elements\Policy\Proxy\CombinerParametersProxy.cs" />
+    <Compile Include="Elements\Policy\Proxy\ConditionProxy.cs" />
+    <Compile Include="Elements\Policy\Proxy\DescriptionProxy.cs" />
+    <Compile Include="Elements\Policy\Proxy\FunctionProxy.cs" />
+    <Compile Include="Elements\Policy\Proxy\MatchProxy.cs" />
+    <Compile Include="Elements\Policy\Proxy\ObligationExpressionProxy.cs" />
+    <Compile Include="Elements\Policy\Proxy\ObligationExpressionsProxy.cs" />
+    <Compile Include="Elements\Policy\Proxy\PolicyCombinerParametersProxy.cs" />
+    <Compile Include="Elements\Policy\Proxy\PolicyDefaultsProxy.cs" />
+    <Compile Include="Elements\Policy\Proxy\PolicyIdReferenceProxy.cs" />
+    <Compile Include="Elements\Policy\Proxy\PolicyIssuerProxy.cs" />
+    <Compile Include="Elements\Policy\Proxy\PolicyProxy.cs" />
+    <Compile Include="Elements\Policy\Proxy\PolicySetCombinerParametersProxy.cs" />
+    <Compile Include="Elements\Policy\Proxy\PolicySetDefaultsProxy.cs" />
+    <Compile Include="Elements\Policy\Proxy\PolicySetIdReferenceProxy.cs" />
+    <Compile Include="Elements\Policy\Proxy\PolicySetProxy.cs" />
+    <Compile Include="Elements\Policy\Proxy\RuleCombinerParametersProxy.cs" />
+    <Compile Include="Elements\Policy\Proxy\RuleProxy.cs" />
+    <Compile Include="Elements\Policy\Proxy\TargetProxy.cs" />
+    <Compile Include="Elements\Policy\Proxy\VariableDefinitionProxy.cs" />
+    <Compile Include="Elements\Policy\Proxy\VariableReferenceProxy.cs" />
+    <Compile Include="Elements\Policy\Proxy\XPathVersionProxy.cs" />
+    <Compile Include="Elements\Policy\Rule.cs" />
+    <Compile Include="Elements\Policy\RuleCombinerParameters.cs" />
+    <Compile Include="Elements\Policy\SelectorXPathHelper.cs" />
+    <Compile Include="Elements\Policy\Target.cs" />
+    <Compile Include="Elements\Policy\VariableDefinition.cs" />
+    <Compile Include="Elements\Policy\VariableReference.cs" />
+    <Compile Include="Exceptions\IllegalExpressionEvaluationException.cs" />
+    <Compile Include="Utils\Indentation.cs" />
+    <Compile Include="Exceptions\Indeterminate.cs" />
+    <Compile Include="Types\Streams\InputStreamParser.cs" />
+    <Compile Include="Types\Xml\Factories\NodeFactory.cs" />
+    <Compile Include="Types\Properties\PropertiesReader.cs" />
+    <Compile Include="Xacml3.cs" />
+    <Compile Include="Types\Xml\XPath.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
